@@ -1,5 +1,4 @@
 import {
-  UPDATE_CAR,
   UPDATE_TOTAL,
   ADD_FEATURE,
   REMOVE_FEATURE
@@ -31,11 +30,6 @@ function reducer(state = initialState, action) {
         additionalPrice: state.car.features
           .map(feature => feature.price)
           .reduce((a, b) => a + b, 0)
-      };
-    case UPDATE_CAR:
-      return {
-        ...state,
-        car: action.payload
       };
     case ADD_FEATURE:
       return {
