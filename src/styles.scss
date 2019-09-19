@@ -22,29 +22,34 @@ body {
   grid-gap: 2em;
   grid-template-columns: repeat(2, minmax(350px, 1fr));
   grid-template-rows: auto;
-}
 
-.box {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
 
-  h1 {
-    font-size: 20px;
-    margin: 0 0 1rem 0;
-  }
+  .box {
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
 
-  .content {
-    padding-top: 1em;
-  }
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
 
-  ol {
-    margin-left: 0;
+    h1 {
+      font-size: 20px;
+      margin: 0 0 1rem 0;
+    }
 
-    li {
-      align-items: center;
-      display: flex;
-      justify-content: flex-start;
+    .content {
+      padding-top: 1em;
+    }
+
+    ol {
+      margin-left: 0;
+
+      li {
+        align-items: center;
+        display: flex;
+        justify-content: flex-start;
+      }
     }
   }
 }
